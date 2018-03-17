@@ -1,0 +1,8 @@
+<h1>ACP BREVET</h1>
+<table>
+	<tr><th> Checkingpoint </th><th> Open Time </th><th> Close Time </th></tr>
+	<tr><th> ============= </th><th> ========= </th><th> ========== </th></tr>
+	{% for i in item %}
+		<tr><td> {{i["km"]}} </td><td> {{i["open"]}} </td><td> {{i["close"]}} </td></tr>
+	{% endfor %}
+</table>

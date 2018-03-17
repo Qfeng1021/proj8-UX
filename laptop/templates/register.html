@@ -1,0 +1,6 @@
+<form method="POST" action="/api/register">
+    {{ form.csrf_token }}
+    <td> {{ form.username.label }}: {{ form.username(size=10) }} </td>
+    <td> {{ form.password.label }}: {{ form.password(size=10) }} </td>
+    <td> <input type="submit" value="Register"> </td>
+</form>

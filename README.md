@@ -1,18 +1,23 @@
-# Project 8: User interface for uthenticated brevet time calculator service
+Author: Qianyi Feng
 
-The goal of this project is to create frontend/UI for Brevet app using Flask-WTF
-and Flask-Login introduced in lectures 08a-flask-login and 08b-flask-wtf. You frontend/UI will reuse the
-authentication service that you created in project 7 (https://github.com/UOCIS322/proj7-auth); in this project,  you are only adding
-a facelift to the services. In addition to creating UI for basic authentication and token
-generation, you will add three additional functionalities in your UI: (a) remember me, (b) logout, 
-and (c) CSRF protection. Note: You don’t have to maintain sessions.
+qfeng@uoregon.edu
 
-## Tasks
+Note:
 
-You'll turn in your credentials.ini using which we will get the following:
+Add the function on the previous project.
 
-* The working application with three parts.
+Sumbit the brevet data on 0.0.0.0:5002 first, then goto 0.0.0.0:5000/api/register to register the username 
 
-* Dockerfile
+and password. If the username exists it would jump to the error page. After register the users the page would jump to 
 
-* docker-compose.yml
+login. After login, the page would jump to the page with token. Add listAll, listAllCsv...after 0.0.0.0:5000/could access
+
+ the data directly without adding token. The token is valid in 300s. Type logout after 5000 would logout user.
+
+The php page of 5001 does not work but access from the address with 5000 and 5002 could work.
+
+(get the token on 0.0.0.0:5000/api/token?username=test2&password=123456, then the website would jump to the token.
+
+Copy the token without the quotation mark, put on 0.0.0.0:5000/listAll?token=[the copied token] (or replace listAll to any
+
+ other requests), and then the results would display.)(proj7)
